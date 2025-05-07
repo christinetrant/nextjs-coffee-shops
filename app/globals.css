@@ -5,9 +5,15 @@
   --color-purple-951: rgba(79, 70, 229, 1);
   --color-gray-951: hsla(0, 0%, 100%, 0.4);
   --color-gray-952: #373b64;
+  --font-heading: var(--font-ibm-plex);
+  --font-body: var(--font-inter);
 }
 
 @layer base {
+  * {
+    box-sizing: border-box;
+  }
+
   html,
   body {
     padding: 0;
@@ -17,6 +23,10 @@
     @apply bg-gradient bg-cover bg-[50%] bg-repeat h-full;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+
   h1 {
     @apply text-4xl font-bold text-white md:text-5xl lg:text-7xl;
   }
@@ -24,14 +34,6 @@
   a {
     color: inherit;
     text-decoration: none;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  p {
-    @apply text-base font-medium;
   }
 
   h1,
@@ -47,7 +49,7 @@
   }
 
   button {
-    @apply w-fit cursor-pointer rounded-lg border-0 bg-purple-951 px-6 py-4 text-lg text-white hover:bg-violet-900;
+    @apply w-fit cursor-pointer rounded-lg border-0 bg-purple-951 px-6 py-4 text-base font-medium text-white hover:bg-violet-900;
   }
 
   button:focus {
