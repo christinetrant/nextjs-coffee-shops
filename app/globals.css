@@ -6,7 +6,7 @@
   --color-gray-951: hsla(0, 0%, 100%, 0.4);
   --color-gray-952: #373b64;
   --font-heading: var(--font-ibm-plex);
-  --font-body: var(--font-inter);
+  --font-body: var(--font-lexend-deca);
 }
 
 @layer base {
@@ -20,11 +20,11 @@
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    @apply bg-gradient bg-cover bg-[50%] bg-repeat h-full;
+    @apply bg-gradient bg-cover bg-[50%] bg-repeat h-full font-body font-light;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading;
+    @apply font-heading font-normal;
   }
 
   h1 {
@@ -57,7 +57,7 @@
   }
 
   p {
-    @apply m-0 text-2xl font-bold md:text-3xl;
+    @apply m-0 text-2xl md:text-3xl;
   }
 }
 

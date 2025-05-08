@@ -1,7 +1,12 @@
-import type { Metadata } from "next";
-import { IBM_Plex_Sans, Inter } from "next/font/google";
 import "./globals.css";
+import type { Metadata } from "next";
+import { 
+  IBM_Plex_Sans, 
+  // Inter
+} from "next/font/google";
+import myFont from "next/font/local";
 
+// This font is not a variable font so needs to have weights added
 const ibmPlexSans = IBM_Plex_Sans({
   variable: "--font-ibm-plex",
   subsets: ["latin"],
@@ -9,11 +14,19 @@ const ibmPlexSans = IBM_Plex_Sans({
   display: "swap",
 });
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
+// const inter = Inter({
+//   variable: "--font-inter",
+//   subsets: ["latin"],
+//   display: "swap",
+// });
+
+const lexendDeca = myFont({
+  src: '../public/fonts/LexendDeca.ttf',
+  variable: "--font-lexend-deca",
   display: "swap",
-});
+})
+
+
 
 export const metadata: Metadata = {
   title: "Coffee Shops Nearby",
@@ -27,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     // Make the font variable names available to the entire app
-    <html lang="en" className={`${ibmPlexSans.variable} ${inter.variable}`}>
+    <html lang="en" className={`${ibmPlexSans.variable} ${lexendDeca.variable}`}>
       <body>
         {children}
       </body>

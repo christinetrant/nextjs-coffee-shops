@@ -3,6 +3,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <h1>Coffee Shops Nearby</h1>
       <h2>Discover your local coffee shops</h2>
+      <p>test paragraph</p>
     </main>
   );
 }
